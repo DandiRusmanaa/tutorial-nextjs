@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 'use client';
 
+=======
+"use client";
+>>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
 import {
   UserGroupIcon,
   HomeIcon,

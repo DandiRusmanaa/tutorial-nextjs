@@ -3,7 +3,10 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 import { LatestInvoice } from '@/app/lib/definitions';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
 export default async function LatestInvoices({
   latestInvoices,
 }: {
@@ -17,9 +20,15 @@ export default async function LatestInvoices({
       <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4">
         {/* NOTE: Uncomment this code in Chapter 7 */}
 
+<<<<<<< HEAD
         <div className="bg-white px-6">
           {latestInvoices.map((invoice, i) => {
             return ( 
+=======
+        {/* <div className="bg-white px-6">
+          {latestInvoices.map((invoice, i) => {
+            return (
+>>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
               <div
                 key={invoice.id}
                 className={clsx(
@@ -54,7 +63,11 @@ export default async function LatestInvoices({
               </div>
             );
           })}
+<<<<<<< HEAD
         </div> 
+=======
+        </div> */}
+>>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
         <div className="flex items-center pb-2 pt-6">
           <ArrowPathIcon className="h-5 w-5 text-gray-500" />
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
@@ -62,4 +75,8 @@ export default async function LatestInvoices({
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
