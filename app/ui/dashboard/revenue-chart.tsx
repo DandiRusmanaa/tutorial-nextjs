@@ -15,36 +15,20 @@ export default async function RevenueChart({
   revenue: Revenue[];
 }) {
   const chartHeight = 350;
-<<<<<<< HEAD
   
-  // NOTE: Uncomment this code in Chapter 7
   const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
   if (!revenue || revenue.length === 0) {
     return <p className="mt-4 text-gray-400">No data available.</p>;
   }
-=======
-  // NOTE: Uncomment this code in Chapter 7
-
-  // const { yAxisLabels, topLabel } = generateYAxis(revenue);
-
-  // if (!revenue || revenue.length === 0) {
-  //   return <p className="mt-4 text-gray-400">No data available.</p>;
-  // }
->>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
 
   return (
     <div className="w-full md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Recent Revenue
       </h2>
-      {/* NOTE: Uncomment this code in Chapter 7 */}
-
-<<<<<<< HEAD
+      
       <div className="rounded-xl bg-gray-50 p-4">
-=======
-      {/* <div className="rounded-xl bg-gray-50 p-4">
->>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
         <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md bg-white p-4 md:gap-4">
           <div
             className="mb-6 hidden flex-col justify-between text-sm text-gray-400 sm:flex"
@@ -73,14 +57,7 @@ export default async function RevenueChart({
           <CalendarIcon className="h-5 w-5 text-gray-500" />
           <h3 className="ml-2 text-sm text-gray-500 ">Last 12 months</h3>
         </div>
-<<<<<<< HEAD
       </div>
     </div>
   );
 }
-=======
-      </div> */}
-    </div>
-  );
-}
->>>>>>> f09bd5b5db03f8355e1b1505158827305448793d
