@@ -1,0 +1,9 @@
+- [x] Resolve merge conflicts in app/dashboard/invoices/create/page.tsx
+- [x] Resolve merge conflicts in app/lib/definitions.ts
+- [x] Resolve merge conflicts in app/login/page.tsx
+- [x] Resolve merge conflicts in app/ui/dashboard/nav-links.tsx
+- [x] Resolve merge conflicts in app/ui/dashboard/revenue-chart.tsx
+- [x] Resolve merge conflicts in app/ui/dashboard/sidenav.tsx
+- [x] Resolve merge conflicts in app/ui/invoices/buttons.tsx
+- [x] Resolve merge conflicts in app/ui/invoices/create-form.tsx
+- [x] Run final TypeScript check to ensure no errors remain

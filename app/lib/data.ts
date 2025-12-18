@@ -19,7 +19,17 @@ export async function fetchRevenue() {
     console.log('Fetching revenue data...');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    const data = await sql<Revenue[]>`SELECT * FROM revenue`;
+    // Aggregate revenue from the invoices table (amount stored in cents).
+    // Many tutorial setups don't create a separate `revenue` table, so
+    // we compute it from `invoices` to avoid the "relation does not exist" error.
+    const data = await sql<Revenue[]>`
+      SELECT to_char(date_trunc('month', date), 'YYYY-MM') AS month,
+             COALESCE(SUM(amount), 0) / 100.0 AS revenue
+      FROM invoices
+      GROUP BY date_trunc('month', date)
+      ORDER BY date_trunc('month', date) DESC
+      LIMIT 12
+    `;
 
     console.log('Data fetch completed after 3 seconds.');
 
@@ -160,7 +170,7 @@ export async function fetchInvoiceById(id: string) {
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
     }));
-    console.log(invoice);
+
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);

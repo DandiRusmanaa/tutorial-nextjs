@@ -20,9 +20,10 @@ export default function EditInvoiceForm({
   customers: CustomerField[];
 }) {
   const initialState: State = { message: null, errors: {} };
-  const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+  const updateInvoiceWithId = (prevState: State, formData: FormData) =>
+    updateInvoice(invoice.id, prevState, formData);
   const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
- 
+
   return (
     <form action={formAction}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
@@ -149,7 +150,6 @@ export default function EditInvoiceForm({
           )}
         </div>
       </div>
-
       <div className="mt-6 flex justify-end gap-4">
         <Link
           href="/dashboard/invoices"
